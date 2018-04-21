@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>ECharts 示例</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../css/mui.min.css">
+	<link rel="stylesheet" href="../css/global.css" />
+	<script src="../js/mui.min.js"></script>
+
+	<style>
+		body {
+            background-color: rgba(247, 247, 247, 1);
+        }
+
+		.ican-history-header {
+			box-shadow: none;
+		}
+
+		.ican-history {
+			background-color: rgba(247, 247, 247, 1);
+		}
+
+		.chart {
+			width: 96%;
+			height: 400px;
+			margin: 0 auto;
+			margin-left: -0.5%;
+		}
+
+		.mui-content-padded {
+			margin-bottom: 0;
+			padding-bottom: 10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<header class="mui-bar mui-bar-nav ican-history-header">
+		<a class="mui-icon mui-icon-left-nav mui-pull-left" id="ican-to-index"></a>
+		<h1 class="mui-title">历史记录</h1>
+	</header>
+	<div class="mui-content ican-history">
+		<div class="mui-content-padded">
+			<!-- 历史类型 -->
+			<h5>历史类型</h5>
+			<div class="chart" id="historyType"></div>
+			<!-- 历史容量 & 历史温度-->
+			<h5>历史容量 & 历史温度</h5>
+			<div class="chart" id="historyCap"></div>
+		</div>
+
+	</div>
+
+	<script src="../libs/echarts.min.js"></script>
+	<script>
+		var optionType = {
+			tooltip: {},
+			legend: {
+				data: ['可回收', '不可回收', '报警']
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			calculable: false,
+			xAxis: {
+				data: ["4.15", "4.16", "4.17", "4.18", "4.19", "4.20"]
+			},
+			yAxis: [{
+				type: 'value',
+				splitArea: {
+					show: false
+				}
+			}],
+			series: [{
+					name: '可回收',
+					type: 'bar',
+					data: [22, 32, 12, 24, 9, 16],
+					color: 'lightblue'
+				},
+				{
+					name: '不可回收',
+					type: 'bar',
+					data: [8, 20, 36, 27, 19, 20],
+					color: 'lightpink'
+				},
+				{
+					name: '报警',
+					type: 'bar',
+					data: [1, 1, 3, 1, 2, 3],
+					color: 'orange'
+				}
+			],
+			itemStyle: {
+
+			}
+		};
+
+		var optionCap = {
+			title: {},
+			tooltip: {
+				trigger: 'axis'
+			},
+			legend: {
+				data: ['容量', '温度']
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				bottom: '3%',
+				containLabel: true
+			},
+			toolbox: {
+				feature: {
+					saveAsImage: {}
+				}
+			},
+			xAxis: {
+				type: 'category',
+				data: ["4.15", "4.16", "4.17", "4.18", "4.19", "4.20", "4.21", "4.22", "4.23", "4.24", "4.25", "4.26"]
+			},
+			yAxis: {
+				type: 'value'
+			},
+			series: [{
+				name: '容量',
+				type: 'line',
+				data: [50, 82, 25, 60, 15, 40, 33, 89, 64, 19, 52, 9],
+				color: 'lightblue',
+				smooth: true
+			}, {
+				name: '温度',
+				type: 'line',
+				data: [35, 32, 38, 29, 28, 33, 35, 38, 42, 40, 39, 35],
+				color: 'pink',
+				smooth: true
+			}]
+		};
+
+
+		var myhistoryType = echarts.init(document.getElementById('historyType'));
+		var myhistoryCap = echarts.init(document.getElementById('historyCap'));
+
+		myhistoryType.setOption(optionType);
+		myhistoryCap.setOption(optionCap);
+
+		document.getElementById('ican-to-index').addEventListener('tap', function () {
+			mui.openWindow({
+				url: '../index.html'
+			})
+		})
+	</script>
+</body>
+
+</html>

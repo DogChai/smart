@@ -1,0 +1,163 @@
+@font-face {
+	font-family: icanFont;
+	src: url('../ican-font/NotoSansHans-Light.otf');
+}
+
+body {
+	/*background-image: url('../images/texture.png');*/
+	background-color: rgba(221, 225, 228, 1);
+	font-family: "icanFont";
+}
+
+.ican-nav {
+	background-color: rgba(255, 255, 255, 0.2);
+	height: 38px;
+	line-height: 38px;
+}
+
+.ican-nav span {
+	display: block;
+	height: 100%;
+	width: 130px;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+.title {
+	margin: 35px 15px 10px;
+}
+
+.mui-off-canvas-left, .mui-off-canvas-right {
+	background-color: #fff;
+}
+
+.mui-table-view-inverted {
+	background-color: #fff;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 32px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+a:active {
+	color: #8f8f94!important;
+}
+
+a {
+	color: #8f8f94;
+}
+
+html,
+body {
+	background-color: #efeff4;
+}
+
+p {
+	text-indent: 4px;
+}
+
+span.mui-icon {
+	font-size: 14px;
+	color: #007aff;
+	margin-left: -15px;
+	padding-right: 10px;
+}
+
+.mui-off-canvas-left {
+	color: #fff;
+}
+
+.title {
+	margin: 35px 15px 10px;
+}
+
+.title+.content {
+	margin: 10px 15px 35px;
+	color: #bbb;
+	text-indent: 1em;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+input {
+	color: #000;
+}
+
+ul li {
+	list-style: none;
+}
+
+.mui-popup {
+	border-radius: 6px;
+}
+
+.mui-popup-inner {
+	border-radius: 6px 6px 0 0;
+	padding: 1px 15px 5px 15px;
+}
+
+.mui-popup-title {
+	font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 15px;
+	padding-bottom: 10px;
+	color: rgba(78, 78, 78, 1)
+}
+
+.mui-popup-title+.mui-popup-text {
+	font-size: 14px;
+    margin: 5px 0 0;
+	padding-bottom: 10px;
+	color: rgb(107, 107, 107);
+}
+
+.mui-popup-button {
+	font-size: 15px;
+	color: #29d637;
+}
+
+
+.mui-popup-button:first-child {
+	border-radius: 0 0 0 6px;
+	color: rgb(252, 73, 73);
+	font-size: 15px;
+}
+
+.mui-popup-button:last-child {
+	border-radius: 0 0 6px 0;
+	color: rgb(86, 132, 215);
+	font-size: 15px;
+}
+
+.mui-popup-button.mui-popup-button-bold {
+	font-weight: 400;
+}
+
+.mui-off-canvas-wrap.mui-active .mui-off-canvas-backdrop {
+	/* box-shadow: -2px 0 2px rgba(123, 123, 123, 0.5), 4px 0 2px rgba(123, 123, 123, 0.5); */
+	box-shadow: none;
+}
+
+.mui-popup-button:after {
+	right: 1px;
+}
+
+.mui-off-canvas-left, .mui-off-canvas-right {
+	width: 55%;
+}
+
+.mui-bar-nav {
+	background-color: rgba(247, 247, 247, 1);
+}
+
+.mui-bar-nav.mui-bar .mui-icon {
+	color: #8f8f94!important;
+}

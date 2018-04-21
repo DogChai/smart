@@ -1,0 +1,12 @@
+{
+  "index.html": {
+    "refer": [
+      "pages/history.html"
+    ]
+  },
+  "pages/history.html": {
+    "refer": [
+      "index.html"
+    ]
+  }
+}
